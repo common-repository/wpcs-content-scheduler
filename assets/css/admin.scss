@@ -1,0 +1,129 @@
+// Dashboard
+
+#wpcs-content-scheduler-dashboard {
+	display: flex;
+	background: #ffffff;
+	margin-top: 15px;
+	border: 1px solid #dddddd;
+	box-shadow: 0 1px 1px rgb( 0 0 0 / 4% );
+	#wpcs-content-scheduler-sidebar {
+		width: 12%;
+		border-right: 1px solid #dddddd;
+		background: #f3f3f3;
+		.wpcs-content-scheduler-sidebar-section {
+			border-bottom: 1px solid #dddddd;
+			padding: 15px;
+			&:last-of-type {
+				border-bottom: 0;
+			}
+			p {
+				margin: 0 0 10px 0;
+				line-height: 1.3;
+			}
+			button {
+				margin-top: 10px;
+			}
+			.wpcs-content-scheduler-sidebar-section-heading {
+				display: block;
+				margin-bottom: 5px;
+				font-weight: 600;
+			}
+			.wpcs-content-scheduler-select2 {
+				width: 100%;
+			}
+			&#wpcs-content-scheduler-sidebar-section-color-key {
+				padding-bottom: 10px; // Padding bottom usually 15px but the individual color keys add 5px bottom margin so this compensates it so padding still equal
+				.wpcs-content-scheduler-color-key {
+					background-color: #3788d8;
+					border-radius: 4px;
+					box-shadow: 0 1px 1px rgb( 0 0 0 / 4% );
+					color: #ffffff !important;
+					display: inline-block;
+					margin-bottom: 5px;
+					padding: 2px 5px;
+					text-decoration: none;
+					&:focus {
+						border: 0;
+						box-shadow: none;
+					}
+					&.wpcs-content-scheduler-color-key-selected {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+	#wpcs-content-scheduler-calendar {
+		width: 88%;
+		padding: 20px;
+		.fc-button {
+			border: 0 !important;
+			border-radius: 2px !important;
+			margin-right: 10px !important;
+			box-shadow: none !important;
+			&:last-of-type {
+				margin-right: 0 !important;
+			}
+		}
+		.fc-toolbar-title {
+			font-size: 1.1em !important;
+		}
+		.fc-daygrid-day-frame {
+			height: 115px !important;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.fc-event {
+			&.wpcs-content-scheduler-event-hide {
+				display: none;
+			}
+		}
+	}
+}
+
+// Settings
+
+#wpcs-content-scheduler-settings {
+	display: flex;
+	flex-wrap: wrap;
+	#wpcs-content-scheduler-fields {
+		width: 65%;
+	}
+	#wpcs-content-scheduler-sidebar {
+		width: 35%;
+		table {
+			margin: 15px 0;
+		}
+	}
+}
+
+// Notice
+
+#wpcs-content-scheduler-notice {
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgb( 0 0 0 / 4% );
+	color: #ffffff;
+	display: none;
+	font-weight: 700;
+	padding: 10px 15px;
+	pointer-events: none;
+	position: fixed;
+	right: 20px;
+	top: 48px;
+	z-index: 9999;
+	&[data-type="info"] {
+		background-color: #2271b1;
+	}
+	&[data-type="error"] {
+		background-color: #d63638;
+	}
+	&[data-type="success"] {
+		background-color: #00a32a;
+	}
+}
+
+// Select2
+
+.wpcs-content-scheduler-select2 {
+	width: 100% !important;
+}

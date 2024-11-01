@@ -1,0 +1,36 @@
+// Popup
+
+body {
+	&.is-fullscreen-mode {
+		overflow: hidden !important;
+	}
+}
+
+#adminmenumain {
+	display: none !important;
+}
+
+#wpcontent {
+	margin-left: 0 !important;
+	#wpadminbar {
+		display: none !important;
+	}
+	#woocommerce-embedded-root {
+		.woocommerce-layout {
+			.woocommerce-layout__header {
+				display: none !important;
+			}
+		}
+	}
+	#wpbody {
+		margin-top: 0 !important;
+		#wpbody-content {
+			#editor {
+				.interface-interface-skeleton {
+					top: 0 !important;
+					left: 0 !important;
+				}
+			}
+		}
+	}
+}
